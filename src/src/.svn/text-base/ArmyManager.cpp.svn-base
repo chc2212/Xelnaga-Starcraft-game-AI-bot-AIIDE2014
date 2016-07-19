@@ -1,0 +1,164 @@
+#include <ArmyManager.h>
+
+ArmyManager::ArmyManager(Arbitrator::Arbitrator<BWAPI::Unit*,double>* arbitrator)
+{
+	this->arbitrator = arbitrator;
+	lastFrameCheck = 0;
+	lastExpandFrame = 0;
+	firstAttack = true;
+}
+
+void ArmyManager::setDefenseManager(DefenseManager* defenseManager)
+{
+	this->defenseManager = defenseManager;
+}
+
+void ArmyManager::setInformationManager(InformationManager* infoManager)
+{
+	this->informationManager = infoManager;
+}
+
+void ArmyManager::setBaseManager(BaseManager *baseManager)
+{
+	this->baseManager = baseManager;
+}
+
+double ArmyManager::enemyDPS()
+{
+  double total = 0;
+
+	for each (BWAPI::Unit *u in SelectAllEnemy()(canMove)(isCompleted)(maxGroundHits,">",0).not(isWorker))
+	{
+		total += ((double)u->getType().groundWeapon().damageAmount())/u->getType().groundWeapon().damageCooldown();
+	}
+
+	return total;
+}
+
+double ArmyManager::myDPS()
+{
+  double total = 0;
+
+	for each (BWAPI::Unit *u in SelectAll()(canMove)(isCompleted)(maxGroundHits,">",0).not(isWorker))
+	{
+		total += ((double)u->getType().groundWeapon().damageAmount())/u->getType().groundWeapon().damageCooldown();
+	}
+
+	return total;
+}
+
+void ArmyManager::update()
+{
+	if (BWAPI::Broodwar->getFrameCount() > lastFrameCheck + 12)
+	{
+		lastFrameCheck = BWAPI::Broodwar->getFrameCount();
+
+		if ((myDPS() > 12) || (myDPS() >= 1.8 && !firstAttack))
+		{
+			if (!firstAttack)
+			{
+				firstAttack = true;
+			}
+
+			std::set<BWAPI::Unit*> idleDefenders = defenseManager->getIdleDefenders();
+			//int count = 0;
+			if (!idleDefenders.empty())
+			{
+				for (std::set<BWAPI::Unit*>::iterator it = idleDefenders.begin(); it != idleDefenders.end(); it++)
+				{
+					arbitrator->setBid(this, *it, 70);
+					//++count;
+				}
+			}
+		}
+
+		std::map<BWAPI::Unit*, InformationManager::UnitData> savedData = informationManager->getSavedData();
+		enemyBuildings.clear();
+		for (std::map<BWAPI::Unit*, InformationManager::UnitData>::const_iterator sd = savedData.begin(); sd != savedData.end(); sd++)
+		{
+			if ((sd->second.exists) && (sd->second.player == BWAPI::Broodwar->enemy()) && (sd->second.type.isBuilding()) && (!sd->second.type.isInvincible()))
+			{
+				enemyBuildings.push_back(sd->second.position);
+			}
+		}
+		round = (int)enemyBuildings.size() - 1;
+
+		//for each (BWAPI::Unit *u in company)
+		for(std::map<BWAPI::Unit*,ArmyManager::ArmyData>::iterator it = company.begin(); it != company.end(); it++)
+		{
+			if (it->first->isIdle())
+			{
+				it->second.mode = ArmyManager::ArmyData::Idle;
+			}
+			if (it->second.mode == ArmyManager::ArmyData::Idle)
+			{
+				BWAPI::Position pos = informationManager->getEnemyStartLocation()->getPosition(); // Enemy start location by default
+
+				if (!informationManager->getEnemyBases().empty())
+				{
+					BWTA::BaseLocation *bl = *(informationManager->getEnemyBases().rbegin());
+					it->second.target = bl;
+					pos = it->second.target->getPosition(); 
+
+					if ((BWAPI::Broodwar->getFrameCount() > lastExpandFrame + 2000) && (myDPS() > 5))
+					{
+						lastExpandFrame = BWAPI::Broodwar->getFrameCount();
+						baseManager->expand(90);
+					}
+				}
+				else
+				{
+					pos = enemyBuildings[round];
+					--round;
+					if (round < 0)
+						round = (int)enemyBuildings.size() - 1;
+				}
+
+				it->first->attack(pos);
+				it->second.mode = ArmyManager::ArmyData::Attacking;
+			}
+
+			//std::set<BWAPI::Unit*> aroundMe = it->first->getUnitsInRadius(it->first->getType().sightRange()); //u->getUnitsInWeaponRange(u->getType().groundWeapon());
+			//for each (BWAPI::Unit *am in aroundMe)
+			//{
+				/* attack workers IF there is no danger!!! */
+				//if (am->getType().isWorker() && am->getPlayer() == BWAPI::Broodwar->enemy())
+				//it->first->attack(am);
+			//}
+		}
+	}
+}
+
+std::string ArmyManager::getName() const
+{
+	return "Army Manager";
+}
+
+std::string ArmyManager::getShortName() const
+{
+	return "Arm";
+}
+
+void ArmyManager::onOffer(std::set<BWAPI::Unit*> units)
+{
+	for each (BWAPI::Unit *u in units)
+	{
+		if (company.find(u) == company.end())
+		{
+			arbitrator->accept(this, u);
+			ArmyManager::ArmyData	ad;
+			ad.mode = ArmyManager::ArmyData::Idle;
+			company[u] = ad;
+		}
+	}
+}
+
+void ArmyManager::onRevoke(BWAPI::Unit *u, double bid)
+{
+	onRemoveUnit(u);
+}
+
+void ArmyManager::onRemoveUnit(BWAPI::Unit* u)
+{
+	company.erase(u);
+}

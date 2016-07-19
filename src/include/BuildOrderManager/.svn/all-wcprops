@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/20/trunk/include/BuildOrderManager
+END
+UnitItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/20/trunk/include/BuildOrderManager/UnitItem.h
+END
+TechItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/20/trunk/include/BuildOrderManager/TechItem.h
+END
+BuildOrderManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/20/trunk/include/BuildOrderManager/BuildOrderManager.h
+END

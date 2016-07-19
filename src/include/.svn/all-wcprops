@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/41/trunk/include
+END
+MoodManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/44/trunk/include/MoodManager.h
+END
+BuildManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/20/trunk/include/BuildManager.h
+END
+UnitGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/20/trunk/include/UnitGroup.h
+END
+BWTA.h
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/4/trunk/include/BWTA.h
+END
+UnderAttackManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/43/trunk/include/UnderAttackManager.h
+END
+BWAPI.h
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/28/trunk/include/BWAPI.h
+END
+EnhancedUI.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/20/trunk/include/EnhancedUI.h
+END
+RectangleArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/20/trunk/include/RectangleArray.h
+END
+ArmyManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/44/trunk/include/ArmyManager.h
+END
+WorkerManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/42/trunk/include/WorkerManager.h
+END
+SpendManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/44/trunk/include/SpendManager.h
+END
+DefenseManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/40/trunk/include/DefenseManager.h
+END
+BaseManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/6/trunk/include/BaseManager.h
+END
+SpyManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/40/trunk/include/SpyManager.h
+END
+BWSAL.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/4/trunk/include/BWSAL.h
+END
+BorderManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/20/trunk/include/BorderManager.h
+END
+Arbitrator.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/6/trunk/include/Arbitrator.h
+END
+Heap.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/20/trunk/include/Heap.h
+END
+TechManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/20/trunk/include/TechManager.h
+END
+MorphManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/20/trunk/include/MorphManager.h
+END
+InformationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/40/trunk/include/InformationManager.h
+END
+Random.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/39/trunk/include/Random.h
+END
+ProductionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/20/trunk/include/ProductionManager.h
+END
+UpgradeManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/20/trunk/include/UpgradeManager.h
+END
+BuildingPlacer.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/20/trunk/include/BuildingPlacer.h
+END
+ConstructionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/20/trunk/include/ConstructionManager.h
+END
+BuildOrderManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/6/trunk/include/BuildOrderManager.h
+END
+UnitGroupManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/20/trunk/include/UnitGroupManager.h
+END
+SupplyManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/20/trunk/include/SupplyManager.h
+END
+ScoutManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/42/trunk/include/ScoutManager.h
+END
