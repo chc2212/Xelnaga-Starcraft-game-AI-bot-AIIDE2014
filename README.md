@@ -47,7 +47,8 @@ The influence map representation was adopted to spatially analyze the influence 
 ##Competition Results
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/pic1.png" width="500">
 ##Xelnava vs Human
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/XelnagaHuman.png" width="500">
+The result of Xelnaga (2011 version) vs. Human (random players in Battle.net) is as follows. 
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/XelnagaHuman2.png" width="500">
 
 #References
 * [H.-S. Park, **H.-C. Cho**, K.-Y. Lee, and K.-J. Kim, “Prediction of early stage opponent strategy for StarCraft AI using scouting and machine learning,” Workshop at SIGGRAPH ASIA (Computer Gaming Track), pp. 7-12, 2012.](http://cilab.sejong.ac.kr/home/lib/exe/fetch.php?media=public:paper:wasa_2012_park.pdf) 
