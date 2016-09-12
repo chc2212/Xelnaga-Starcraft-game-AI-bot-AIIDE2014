@@ -24,11 +24,11 @@ Ideally, the recon unit orbits perfectly around the opponent’s building keepin
 
 When there is more than one opponent structure in the recon unit’s view, it regards them as one big virtual building. If there are N opponent’s buildings in the recon unit’s view, each building is identified as O1, O2, O3, …, and ON. The position of the Oi is defined as (xi, yi). If the position of the recon unit is defined as (rx, ry), the vector for each building is defined as Vi(xi-rx, yi-ry). V Rotate CCW with 80 degree, the final vector is the direction of the recon unit.
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p4.png" width = "400" align="Left">
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Picture3.png" width = "400">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Picture3.png" width = "350">
 
 * Average of survival time of scouting unit (Xelnaga)
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Picture4.png" width = "400">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Picture4.png" width = "300">
 
 ##influence map and confidence system
 The influence map representation was adopted to spatially analyze the influence of units. Through influence map, each unit has confidence and it is used to judge status of units in various situations.   
@@ -40,12 +40,17 @@ The influence map representation was adopted to spatially analyze the influence 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p1.gif">
 * Judging whether an unit is in danger and order fleeing 
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "400">
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "400">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "380">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "380">
 
-#Competition Results
+#Results
+##Competition Results
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/pic1.png" width="500">
+##Xelnava vs Human
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/XelnagaHuman.png" width="500">
 
 #References
 * [H.-S. Park, **H.-C. Cho**, K.-Y. Lee, and K.-J. Kim, “Prediction of early stage opponent strategy for StarCraft AI using scouting and machine learning,” Workshop at SIGGRAPH ASIA (Computer Gaming Track), pp. 7-12, 2012.](http://cilab.sejong.ac.kr/home/lib/exe/fetch.php?media=public:paper:wasa_2012_park.pdf) 
 * [**H.-C. Cho**, and K.-J. Kim, “Design and evaluation of intelligence architecture for RTS games: Case Study of StarCraft,” Fall Conference of Korea Culture & Contents Technology Association, 2012.](http://cilab.sejong.ac.kr/home/lib/exe/fetch.php?media=public:paper:2012:ctkorea_2012_ho_chul_cho.pdf)
+* AAAI AIIDE RTS game AI competitions (https://webdocs.cs.ualberta.ca/~cdavid/starcraftaicomp/)
+* IEEE CIG RTS game AI competitions (http://cilab.sejong.ac.kr/sc_competition2015/)
