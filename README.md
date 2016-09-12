@@ -8,11 +8,11 @@ This is an StarCraft AI bot for RTS game competitions (IEEE CIG RTS AI competiti
 ##influence map and confidence system
 The influence map representation was adopted to spatially analyze the influence of units. Through influence map, each unit has confidence and it is used to judge status of units in various situations.   
 * Changing confidence of each unit
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/3.gif" width="300">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p3.gif" width="300">
 * Searching effectively attact point for area attack (attack to multiple units at once)
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/1.gif" width="300">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p1.gif" width="300">
 * Judging whether an unit is in danger and order fleeing 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/2.gif" width="300">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width="300">
 
 #Screen Captures
 
