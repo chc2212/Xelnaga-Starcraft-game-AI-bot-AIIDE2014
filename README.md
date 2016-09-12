@@ -5,9 +5,25 @@ This is an StarCraft AI bot for RTS game competitions (IEEE CIG RTS AI competiti
 ##Structure between functions
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Xelnaga_pic.jpg" width="300">
 
+
+#Attack and defence
+
+
+##Navigation (Scouting)
+The purpose of this step is to find the opponent’s base and collect data about it. The scouting unit is a worker (resource collector) from one of the races. Instead of mining the resources, they explore the dark area to find the opponent’s base. The first step is to find the location. There are several possible areas for the opponent’s position on the general game map. A scouting unit checks all candidate areas. 
+
+After finding the opponent base area, then the recon unit scouts the area. There are two important goals in this step. (1) The recon unit should survive in the hostile area as long as possible. (2) The unit should reveal as many of the opponent’s structures/units as possible. However, it is not trivial to satisfy both of them.  To collect data precisely, the recon unit should be close to the opponent’s structures/units. But, this increases the risk that the recon unit will be damaged or destroyed. So, the recon unit has to be close to them, but not too close to be attacked.
+
+Our recon unit is mimicking the human player’s scouting. They continuously rotate the area keeping constant distance to the buildings. If the unit is inside the opponent’s area, the first task is to go to the main building (Nexus, Command Center, or Hatchery). When the opponent’s building hits the visible area of the scouting unit, it changes the navigation path. We only consider an opponent’s buildings to decide the direction of movement. When the recon unit sees an opponent’s building, it changes its direction 90° CCW (Counter Clock Wise) or CW (Clock Wise). So, the recon unit orbits round the opponent’s structure. CCW or CW is not important in this method. 
+
+Ideally, the recon unit orbits perfectly around the opponent’s building keeping the same distance. However, the recon unit is not rotating in an ideal circle. This is caused by the update rate (update per 13 game ticks). If the update rate is increased, the recon unit’s movements are close to the circle but it consumes much computational resource (critical to a real-time game). Instead of adjusting the updating rate, we change the rotation angle. Testing on 75, 80, 85, and 90 degrees show that 80 is the best one.
+
+When there is more than one opponent structure in the recon unit’s view, it regards them as one big virtual building. If there are N opponent’s buildings in the recon unit’s view, each building is identified as O1, O2, O3, …, and ON. The position of the Oi is defined as (xi, yi). If the position of the recon unit is defined as (rx, ry), the vector for each building is defined as Vi(xi-rx, yi-ry). V Rotate CCW with 80 degree, the final vector is the direction of the recon unit.
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p4.png" width = "600">
+
 ##influence map and confidence system
 The influence map representation was adopted to spatially analyze the influence of units. Through influence map, each unit has confidence and it is used to judge status of units in various situations.   
-* Changing confidence of each unit
+* Confidence of each unit by influence map
 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p3.gif">
 * Searching effectively attact point for area attack (attack to multiple units at once)
@@ -15,10 +31,8 @@ The influence map representation was adopted to spatially analyze the influence 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p1.gif">
 * Judging whether an unit is in danger and order fleeing 
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif">
-
-#Screen Captures
-
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "400">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "400">
 
 #Competition Results
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/pic1.png" width="500">
