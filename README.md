@@ -1,5 +1,5 @@
 # Xelnaga-Starcraft-game-AI-bot-AIIDE2014
-This is an StarCraft AI bot for RTS game competitions (IEEE CIG RTS AI competition and AAAI AIIDE RTS AI competition). This AI bot uses the influence map, navigation system, expert system, and planning.
+This is an StarCraft AI bot for RTS game competitions (IEEE CIG RTS AI competition and AAAI AIIDE RTS AI competition). This AI bot uses the influence map, navigation system, expert system, and planning. 
 
 #Method
 ##Structure between functions
