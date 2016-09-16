@@ -20,11 +20,11 @@ For effcient attack and defence, each unit allocates enemy units through appropr
 
 * Xelnaga (Orange) vs Skynet
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defense.gif" width = "380">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defense.gif" width = "400">
 
 * Xelnaga (Green) vs Skynet
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defenseAndAttack.gif" width = "380">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defenseAndAttack.gif" width = "400">
 
 
 ##Navigation (Scouting)
@@ -47,7 +47,7 @@ When there is more than one opponent structure in the recon unit’s view, it re
 * Xelnaga (Green) vs. Skynet
  
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/scouting.gif" width = "400">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/scouting.gif" width = "450">
 
 ##Influence map and confidence system
 The influence map representation was adopted to spatially analyze the influence of units. Through influence map, each unit has confidence and it is used to judge status of units in various situations.   
@@ -59,12 +59,14 @@ The influence map representation was adopted to spatially analyze the influence 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p1.gif">
 * Judging whether an unit is in danger and order fleeing 
 
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "350">
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "350">
+
 * Effective area attack (psionic storm) using influence map
- 
+
+
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/storm.gif" width = "400">
 
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "380">
-<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "380">
 
 #Results
 ##Competition Results
