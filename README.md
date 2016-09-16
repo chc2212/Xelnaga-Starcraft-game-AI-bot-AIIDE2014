@@ -8,10 +8,24 @@ This is an StarCraft AI bot for RTS game competitions (IEEE CIG RTS AI competiti
 ##Automatic build order and build order change
 We applied order of priority and rules to make build order automatically. And enemy's build order information acquired by scouting is used to judge enemy's strategy, especially whether enemy intends to attak on early stage. If Xelnaga judges enemy's stretegy is fast attack, then Xelnaga changes build order to focus on making militery units. 
 
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/autoBulid1.gif" width = "350" align = "Left">
+
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/autoBuild2.gif" width = "350">
+
+
 ##Attack and defence
 For effcient attack and defence, each unit allocates enemy units through appropriate algorithms.
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p5.gif" width = "300">
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p7.gif" width = "300">
+
+* Xelnaga (Orange) vs Skynet
+
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defense.gif" width = "380">
+
+* Xelnaga (Green) vs Skynet
+
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/defenseAndAttack.gif" width = "380">
+
 
 ##Navigation (Scouting)
 The purpose of this step is to find the opponent’s base and collect data about it. The scouting unit is a worker (resource collector) from one of the races. Instead of mining the resources, they explore the dark area to find the opponent’s base. The first step is to find the location. There are several possible areas for the opponent’s position on the general game map. A scouting unit checks all candidate areas. 
@@ -30,7 +44,12 @@ When there is more than one opponent structure in the recon unit’s view, it re
 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/Picture4.png" width = "300">
 
-##influence map and confidence system
+* Xelnaga (Green) vs. Skynet
+ 
+
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/scouting.gif" width = "400">
+
+##Influence map and confidence system
 The influence map representation was adopted to spatially analyze the influence of units. Through influence map, each unit has confidence and it is used to judge status of units in various situations.   
 * Confidence of each unit by influence map
 
@@ -39,6 +58,10 @@ The influence map representation was adopted to spatially analyze the influence 
 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p1.gif">
 * Judging whether an unit is in danger and order fleeing 
+
+* Effective area attack (psionic storm) using influence map
+ 
+<img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/storm.gif" width = "400">
 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p2.gif" width = "380">
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/p6.gif" width = "380">
