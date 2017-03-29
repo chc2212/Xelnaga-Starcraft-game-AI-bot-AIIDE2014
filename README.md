@@ -71,6 +71,7 @@ The influence map representation was adopted to spatially analyze the influence 
 # Results
 ## Competition Results
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/pic1.png" width="500">
+
 ## Xelnava vs Human
 The result of Xelnaga (2011 version) vs. Human (random players in Battle.net) is as follows. 
 <img src="https://github.com/chc2212/Xelnaga-Starcraft-game-AI-bot-AIIDE2014/blob/master/XelnagaHuman2.png" width="500">
